@@ -1,0 +1,7 @@
+{
+  "name": "dicerandom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

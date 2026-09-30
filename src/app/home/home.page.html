@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-text-center ion-padding" style="margin-top: 50px">
+    <div class="dice-wrapper">
+      <div class="dice-box" [class.rolling]="isRolling">{{ diceValue }}</div>
+    </div>
+
+    <br />
+
+    <p class="ion-margin-top" style="color: gray">
+      {{ isRolling ? 'Rolling...' : 'try mo i-shake mo!!' }}
+    </p>
+  </div>
+</ion-content>

@@ -1,0 +1,70 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.dice-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  margin: 32px 0;
+}
+
+.dice-box {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ion-color-dark);
+  background: var(--ion-color-light);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease-out;
+}
+
+.rolling {
+  animation: rollTumble 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes rollTumble {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateY(-20px) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) translateY(10px) scale(1.05);
+  }
+  75% {
+    transform: rotate(270deg) translateY(-10px) scale(1.02);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0) scale(1);
+  }
+}
